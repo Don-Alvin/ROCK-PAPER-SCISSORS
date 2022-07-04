@@ -7,6 +7,9 @@ function computerPlay(){
     return selection[Math.floor(Math.random() * selection.length)].toUpperCase();
 }
 
+const play = document.querySelectorAll('button');
+play.document.addEve
+
 function playRound(playerSelection, computerSelection){
     if (playerSelection == "rock"){
        if(computerSelection == "PAPER"){
@@ -42,7 +45,7 @@ function playRound(playerSelection, computerSelection){
 }
 
 
-function game(){
+/*function game(){
     for (let i = 0; i < 5; i++) {
         const playerSelection = prompt("What is your selection? ").toLowerCase();
         const computerSelection = computerPlay();
@@ -54,7 +57,7 @@ function game(){
     }else if (playerScore < compScore){
         return "You lost to the computer.Try again!";
     }
-}
+}*/
 
 console.log(game());
 

@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
+    <div class="intro">
+        <h1>Rock Paper Scissors</h1>
+        <h2>Can you beat the computer?</h2>
+        <div class="underline"></div>
+    </div>
+    <div class="weapon">
+        <h1>Choose your weapon</h1>
+        <div class="choices">
+            <button class="btn rock"></button>
+            <button class="btn paper"></button>
+            <button class="btn scissors"></button>
+        </div>
+    </div>
+    <div class="counter">
+        <h1>Player: <span>0</span></h1> 
+        <h1>Computer: <span>0</span></h1>
+    </div>
    <script src="./assets/script.js"></script> 
 </body>
 </html>

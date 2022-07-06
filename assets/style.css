@@ -39,7 +39,7 @@ html{
     align-items: center;
 }
 
-.btn{
+.selection{
     height: 150px;
     width: 150px;
     font-size: 3rem;
@@ -50,7 +50,7 @@ html{
     border: 2px solid rgb(228, 121, 121);
 }
 
-.btn:hover{
+.selection:hover{
     transform: scale(1.3);
     transition: .5s;
     box-shadow: 3px 3px 6px 6px rgb(228, 121, 121);
@@ -87,4 +87,22 @@ html{
 .counter{
     display: flex;
     justify-content: center;
+}
+
+p{
+    color:rgb(228, 121, 121);
+    display: block;
+    font-size: 3rem;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.message h2{
+    color:rgb(228, 121, 121);
+    font-size: 3rem;
 }

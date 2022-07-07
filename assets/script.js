@@ -13,66 +13,79 @@ const scissorsButton = document.querySelector('.scissors');
 const message = document.querySelector('.message');
 const playerCount = document.querySelector('.playerCount');
 const compCount = document.querySelector('.compCount')
+const p = document.createElement('p');
 
 function checkForWinner(playerScore, compScore){
     if(playerScore === 5){
         const h2 = document.createElement('h2');
+        p.remove();
         h2.textContent = `You won ${playerScore} to ${compScore} against the computer`;
         message.appendChild(h2);
     }else if (compScore === 5){
         const h2 = document.createElement('h2');
+        p.remove();
         h2.textContent = `You lost ${playerScore} to ${compScore} against the computer`;
         message.appendChild(h2); 
     }
 }
 
 
+
+
 function playRound(playerSelection, computerSelection){
     if (playerSelection == "rock"){
        if(computerSelection == "Paper"){
             compScore++;
-            const p = document.createElement('p');
+            //const p = document.createElement('p');
             p.textContent = "You Lose! Paper beats Rock!";
             message.appendChild(p);
        }else if (computerSelection == "Scissors"){
             playerScore++;
-            const p = document.createElement('p');
+            p.remove();
+            //const p = document.createElement('p');
             p.textContent = "You win! Rock beats scissors!";
             message.appendChild(p);
        }else if (computerSelection == "Rock"){
-        const p = document.createElement('p');
+        p.remove();
+        //const p = document.createElement('p');
         p.textContent = "It's a draw";
         message.appendChild(p);
        }
     }else if (playerSelection == "paper"){
         if(computerSelection == "Rock"){
             playerScore++;
-            const p = document.createElement('p');
+            p.remove();
+            //onst p = document.createElement('p');
             p.textContent = "You win! Paper beats rock!";
             message.appendChild(p);
         }else if (computerSelection == "Scissors"){
             compScore++;
-            const p = document.createElement('p');
+            p.remove();
+            //const p = document.createElement('p');
             p.textContent = "You Lose! Scissors beats Paper!";
             message.appendChild(p);
         }else if (computerSelection == "Paper"){
-            const p = document.createElement('p');
+            p.remove();
+            //const p = document.createElement('p');
             p.textContent = "It's a draw!";
             message.appendChild(p);
         }
     }else if (playerSelection == "scissors"){
         if(computerSelection == "Rock"){
             compScore++;
-            const p = document.createElement('p');
+            p.remove();
+            //const p = document.createElement('p');
             p.textContent = "You Lose! Rock beats Scissors!";
             message.appendChild(p); 
         }else if (computerSelection == "Paper"){
             playerScore++;
-            const p = document.createElement('p');
+            p.remove();
+            //const p = document.createElement('p');
             p.textContent = "You win! Scissors beats paper!";
             message.appendChild(p);
         }else if (computerSelection == "Scissors"){
-            const p = document.createElement('p');
+            p.remove();
+            //const p = document.createElement('p');
             p.textContent = "It's a draw!"
             message.appendChild(p);
         }
@@ -106,20 +119,6 @@ scissorsButton.addEventListener('click', () => {
     compCount.textContent = `${compScore}`
 });
 
-
-/*function game(){
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt("What is your selection? ").toLowerCase();
-        const computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection))
-    }
-
-    if (playerScore > compScore){
-        return "You won, you beat the computer!";
-    }else if (playerScore < compScore){
-        return "You lost to the computer.Try again!";
-    }
-}*/
 
 
 

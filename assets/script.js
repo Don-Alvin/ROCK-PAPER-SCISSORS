@@ -14,18 +14,34 @@ const message = document.querySelector('.message');
 const playerCount = document.querySelector('.playerCount');
 const compCount = document.querySelector('.compCount')
 const p = document.createElement('p');
+const body = document.querySelector('body');
+const newDiv = document.createElement('div');
+newDiv.classList.add('reload')
+body.append(newDiv);
+const reload = document.createElement('button');
+reload.classList.add('btn')
+//newDiv.append(reload)
+const anchorTag = document.createElement('a');
+anchorTag.textContent = 'Play Again'
+reload.append(anchorTag);
+anchorTag.href = "index.html";
+const counter = document.querySelector('.counter');
 
 function checkForWinner(playerScore, compScore){
     if(playerScore === 5){
         const h2 = document.createElement('h2');
         p.remove();
+        counter.remove();
+        newDiv.append(reload)
         h2.textContent = `You won ${playerScore} to ${compScore} against the computer`;
         message.appendChild(h2);
     }else if (compScore === 5){
         const h2 = document.createElement('h2');
         p.remove();
+        counter.remove();
+        newDiv.append(reload)
         h2.textContent = `You lost ${playerScore} to ${compScore} against the computer`;
-        message.appendChild(h2); 
+        message.appendChild(h2);
     }
 }
 

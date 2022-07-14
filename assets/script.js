@@ -1,7 +1,6 @@
 let playerScore = 0;
 let compScore = 0;
 
-
 function computerPlay(){
     const selection = ["Rock", "Paper", "Scissors"]
     return selection[Math.floor(Math.random() * selection.length)]//.toUpperCase();
@@ -28,6 +27,7 @@ anchorTag.href = "index.html";
 const counter = document.querySelector('.counter');
 
 function checkForWinner(playerScore, compScore){
+   
     if(playerScore === 5){
         const h2 = document.createElement('h2');
         p.remove();
@@ -43,12 +43,11 @@ function checkForWinner(playerScore, compScore){
         h2.textContent = `You lost ${playerScore} to ${compScore} against the computer`;
         message.appendChild(h2);
     }
+
 }
 
-
-
-
 function playRound(playerSelection, computerSelection){
+
     if (playerSelection == "rock"){
        if(computerSelection == "Paper"){
             compScore++;
